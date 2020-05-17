@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author : TenYun
@@ -24,19 +21,20 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "cm_user")
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long uid;
 
-    @Column(nullable = false)
+    @Column(name = "username", nullable = false, length = 50, unique = true)
     private String username;
 
-    @Column(nullable = false)
+    @Column(name = "password", nullable = false, length = 30)
     private String password;
 
-    @Column(nullable = false)
+    @Column(name = "email", nullable = false, unique = true, length = 50)
     private String email;
 
 }

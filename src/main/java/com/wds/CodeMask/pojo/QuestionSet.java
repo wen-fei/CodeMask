@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author : TenYun
@@ -20,26 +18,28 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "cm_questionset")
 public class QuestionSet {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long qid;
 
-    @Column(nullable = false)
-    private String qs_title;
+    @Column(name = "qs_title", nullable = false)
+    private String title;
 
-    @Column(nullable = false)
-    private String qs_desc;
+    @Column(name = "qs_desc", nullable = false)
+    private String desc;
 
-    @Column(nullable = false)
-    private Long qs_author;
+    @Column(name = "qs_author", nullable = false)
+    private Long author;
 
-    @Column(nullable = false)
-    private Long qs_category;
+    @Column(name = "qs_author", nullable = false)
+    private Long category;
 
+    @Column(name = "qs_label")
+    private String label;
 
-    private String qs_label;
-
-    @Column(nullable = false)
-    private Float qs_score;
+    @Column(name = "qs_score", nullable = false)
+    private Float score;
 }
