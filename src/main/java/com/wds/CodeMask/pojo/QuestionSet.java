@@ -32,9 +32,6 @@ public class QuestionSet {
     private String desc;
 
     @Column(name = "qs_author", nullable = false)
-    private Long author;
-
-    @Column(name = "qs_author", nullable = false)
     private Long category;
 
     @Column(name = "qs_label")
