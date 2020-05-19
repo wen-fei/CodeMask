@@ -5,6 +5,6 @@
              local-report-storage-time="7" local-logivew-storage-time="7">
     </storage>
     <console default-domain="Cat" show-cat-domain="true">
-        <remote-servers>127.0.0.1:8081</remote-servers>        
+        <remote-servers>localhost:8081</remote-servers>        
     </console>
 </config>

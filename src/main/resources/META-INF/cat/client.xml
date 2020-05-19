@@ -2,6 +2,6 @@
 <config mode="client" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="config.xsd">
     <servers>
         <!-- Local mode for development -->
-        <server ip="127.0.0.1" port="2280" http-port="8081" />
+        <server ip="localhost" port="2280" http-port="8081" />
     </servers>
 </config>
